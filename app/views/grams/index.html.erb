@@ -1,1 +1,11 @@
 <h1>Grams!</h1>
+
+<% @grams.each do |gram| %>
+<div>
+    <%= gram.message %>
+  <% if gram.picture != nil %>
+    <%= image_tag gram.picture.to_s %>
+  <% end %>
+</div>
+
+<% end %>
